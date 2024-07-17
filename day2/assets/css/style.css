@@ -1,0 +1,111 @@
+/* Global CSS */
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+p{
+    text-align: justify;
+}
+button {
+    padding: 8px 12px 8px 12px;
+    border-radius: 20px 20px 20px 20px;
+    width: 120px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Home */
+.container {
+    display: flex;
+    
+}
+
+.container .hm-profile {
+    padding: 20px;
+    width: 65%;
+}
+.container .hm-profile .cta-profile{
+    display: flex;
+    align-items: center;
+}
+
+.container .hm-profile .social-menu {
+    display: flex;
+}
+.container .hm-profile .social-menu ul i{
+    padding: 12px;
+}
+
+/* Card */
+
+/* navbar */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+}
+
+nav .left .logo{
+    padding: 12px;
+}
+nav .left ul{
+    display: flex;
+}
+
+nav .left li{
+    list-style-type: none;
+    padding: 0px 10px;
+    
+}
+
+nav .right {
+    display: flex;
+    padding: 0px 10px;   
+}
+
+/* contact */
+
+form {
+    width: 300px;
+    margin: 20px auto;
+}
+
+form h1{
+    text-align: center;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    resize: vertical;
+}
+
+form div{
+    margin-bottom: 15px;
+}
+form button{
+    border: none;
+    color: white;
+    background-color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+}
