@@ -2,6 +2,7 @@
 body {
     margin: 0;
     background-color: rgb(217, 232, 245);
+    font-family: 'Poppins', sans-serif;
 }
 a {
     text-decoration: none;
@@ -21,22 +22,27 @@ button {
 img {
     max-width: 100%;
 }
+.title {
+    text-align: center;
+}
 
 /* Home */
 .container {
+    width: 1000px;
     display: flex;
-    background-color: rgb(255, 255, 255);
-    margin: 40px;
-    padding: 12px;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
     box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.37);
+    background-color: rgb(255, 255, 255);
     
 }
 
 .container .hm-profile {
-    margin: auto;
+    margin: 20px 40px;
     padding: 20px;
-    width: 400px;
+    width: 500px;
 }
 .container .hm-profile .cta-profile{
     display: flex;
@@ -143,4 +149,140 @@ form button{
     background-color: rgb(18, 65, 65);
     font-weight: bold;
     cursor: pointer;
+}
+
+/* My project */
+.project-result {
+    background-color: white;
+    margin: 0;
+}
+.project-result .title{
+    padding-top: 20px;
+
+}
+.container-myproject {
+    display: flex;
+    justify-content: center;
+    margin: 10px 40px auto;
+    padding: 12px;
+    border-radius: 5px;
+    
+}
+.container-myproject .container-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-myproject .container-card .container-content{ 
+   width: 200px;
+   margin: 10px;
+   text-align: justify;
+}
+.container-myproject .container-card .container-content .container-button{ 
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  gap: 10px;
+}
+
+.project .checkbox{
+ display: flex;
+ justify-content: space-around;
+ gap: 10px;
+}
+.project .checkbox .form-checkleft{
+    display: flex;
+   width: 50%;
+   flex-direction: column;
+   align-items: flex-start;
+   
+}
+.project .checkbox .form-checkright{
+   display: flex;
+   width: 50%;
+   flex-direction: column;
+   align-items: flex-start;
+   
+}
+.project .checkbox .checklist{
+   display: flex;
+}
+
+/* detail */
+.container-detail {
+    display: flex;
+    margin: 10px 40px;
+    padding: 12px;
+    border-radius: 5px;
+    
+}
+.container-detail .content{
+    margin: 0px 40px;
+    padding: 12px;
+    text-align: justify;
+    
+}
+.container-detail .container-content {
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-detail .Image img  {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+.container-detail .image-detail{
+    width: 400px;
+    margin: 0px 20px auto;
+    height: 300px;
+}
+
+.container-detail .image-detail .duration {
+  width: 100%;
+
+}
+.duration-title { 
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+   
+.duration-time, .duration-date {
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+.technologies {
+    width: 100%;
+}
+
+.technologies-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.technologies-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.technologies-content .technologies-left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.technologies-content .technologies-right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.technologies-content .technologies-right img{
+    width: 20px;
+    height: 20pxpx;
 }
