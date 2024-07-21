@@ -28,19 +28,21 @@ img {
 
 /* Home */
 .container {
+    width: 1000px;
     display: flex;
-    background-color: rgb(255, 255, 255);
-    margin: 40px;
-    padding: 12px;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
     box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.37);
+    background-color: rgb(255, 255, 255);
     
 }
 
 .container .hm-profile {
-    margin: auto;
+    margin: 20px 40px;
     padding: 20px;
-    width: 400px;
+    width: 500px;
 }
 .container .hm-profile .cta-profile{
     display: flex;
@@ -150,9 +152,18 @@ form button{
 }
 
 /* My project */
+.project-result {
+    background-color: white;
+    margin: 0;
+}
+.project-result .title{
+    padding-top: 20px;
+
+}
 .container-myproject {
     display: flex;
-    margin: 10px 40px;
+    justify-content: center;
+    margin: 10px 40px auto;
     padding: 12px;
     border-radius: 5px;
     
@@ -174,6 +185,7 @@ form button{
   margin: 10px 0px;
   gap: 10px;
 }
+
 .project .checkbox{
  display: flex;
  justify-content: space-around;
