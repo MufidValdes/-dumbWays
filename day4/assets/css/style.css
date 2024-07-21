@@ -2,6 +2,7 @@
 body {
     margin: 0;
     background-color: rgb(217, 232, 245);
+    font-family: 'Poppins', sans-serif;
 }
 a {
     text-decoration: none;
@@ -148,7 +149,31 @@ form button{
     cursor: pointer;
 }
 
-/* project */
+/* My project */
+.container-myproject {
+    display: flex;
+    margin: 10px 40px;
+    padding: 12px;
+    border-radius: 5px;
+    
+}
+.container-myproject .container-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-myproject .container-card .container-content{ 
+   width: 200px;
+   margin: 10px;
+   text-align: justify;
+}
+.container-myproject .container-card .container-content .container-button{ 
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  gap: 10px;
+}
 .project .checkbox{
  display: flex;
  justify-content: space-around;
