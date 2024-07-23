@@ -42,9 +42,9 @@
       <form>
         <h1>ADD MY PROJECT</h1>
         <div>
-          <label for="projectName">Project Name</label>
+          <label for="input-project-name">Project Name</label>
           <input
-            id="projectName"
+            id="input-project-name"
             type="text"
             required
             placeholder="input your Name"
@@ -61,8 +61,8 @@
           </div>
         </div>
         <div>
-          <label for="description">Description</label>
-          <textarea id="description"></textarea>
+          <label for="input-project-desc">Description</label>
+          <textarea id="input-project-desc"></textarea>
         </div>
         <div>
           <label for="Technologies">
@@ -97,8 +97,12 @@
               </div>
             </div>
             <div>
-            <label for="uploadImage">Upload Image</label>
-            <input type="file" id="uploadImage">
+            <div class="input-blog-image-group">
+              <label for="input-uploadImage">
+                <p>Upload Image</p>
+              </label>
+              <input type="file" id="input-uploadImage" />
+            </div>
           </div>
         </div>
         <div style="display: flex; justify-content: end;">
@@ -114,7 +118,7 @@
         <h1>MY PROJECT</h1>
       </div>
       <div class="container-myproject">
-        <div class="container-card">
+        <div class="container-card" id="contents">
             <div class="container-content">
                 <div class="container-profile">
                     <img src="./assets/images/picture.jpg" alt="smartphone">
@@ -209,6 +213,7 @@
         </div>
       </div>
     </div>
+    <script src="./assets/js/myProject.js"></script>
   </body>
 </html>
 
