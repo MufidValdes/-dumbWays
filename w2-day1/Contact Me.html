@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="navbar-container">
+      <nav class="nav-list">
+        <div class="left">
+          <div class="logo">
+            <a href="#">
+              <img
+              src="https://dumbways.id/assets/images/brandred.png"
+              alt="logo"
+              />
+            </a>
+          </div>
+          <ul>
+            <li><a href="./index.html" >Home</a ></li>
+            <li><a href="./add project.html">My Project</a > </li>
+          </ul>
+        </div>
+        <div class="right">
+          <button class="btn-contact-me"> <a href="./Contact Me.html " style="color: white;"> 
+            Contact Me
+          </a>
+        </button>
+        <button class="btn-hamburger" onclick="toggleNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        </div>  
+      </div>
+    </nav>
+    <div>
+      <ul class="hamburger-container hamburger-hide" id="hamburger-container">
+        <li><a href="./index.html">Home</a> </li>
+        <li><a href="./add project.html">My Project</a > </li>
+        <li><a href="./Contact Me.html">Contact Me</a></li>
+      </ul>
+    </div>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- Contact Me -->
+      <div class="Contact">
+        <form>
+          <h1>GET IN TOUCH</h1>
+          <div>
+            <label for="inputName">Name</label>
+            <input
+              id="inputName"
+              type="text"
+              required
+              placeholder="input your Name"
+            />
+          </div>
+          <div>
+            <label for="inputEmail">Email</label>
+            <input
+              id="inputEmail"
+              type="email"
+              required
+              placeholder="input your Email"
+            />
+          </div>
+          <div>
+            <label for="inputNumber">Phone Number</label>
+            <input
+              id="inputNumber"
+              type="number"
+              required
+              placeholder="input your Number Phone"
+            />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <select id="subject">
+              <option hidden>Select Subject!</option>
+              <option>Question</option>
+              <option>Hire</option>
+              <option>Let's Connect</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- footer -->
+
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- script -->
+    <script
+      src="https://kit.fontawesome.com/917179b360.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/navbar.js"></script>
+  </body>
+  </html>
+
