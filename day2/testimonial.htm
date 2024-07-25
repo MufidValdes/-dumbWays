@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="./assets/css/">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+   <!-- header -->
+   <header class="navbar-container">
+    <nav class="nav-list">
+      <div class="left">
+        <div class="logo">
+          <a href="#">
+            <img
+            src="https://dumbways.id/assets/images/brandred.png"
+            alt="logo"
+            />
+          </a>
+        </div>
+        <ul>
+          <li><a href="./index.html" >Home</a ></li>
+          <li><a href="./add project.html">My Project</a > </li>
+        </ul>
+      </div>
+      <div class="right">
+        <button class="btn-contact-me"> <a href="./Contact Me.html " style="color: white;"> 
+          Contact Me
+        </a>
+      </button>
+      <button class="btn-hamburger" onclick="toggleNavbar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      </div>  
+    </div>
+  </nav>
+  <div>
+    <ul class="hamburger-container hamburger-hide" id="hamburger-container">
+      <li><a href="./index.html">Home</a> </li>
+      <li><a href="./add project.html">My Project</a > </li>
+      <li><a href="./Contact Me.html">Contact Me</a></li>
+    </ul>
+  </div>
+  </header>
+
+  <!-- Main -->
+   <main>
+       <div class="container">
+        <div class="title">
+            <h1>My Testimonials</h1>
+        </div>
+         <div class="container-rating">
+           <h2>Rating By Star</h2>
+           <div class="rating">
+             <button class="rating-btn">All</button>
+             <button class="rating-btn">1 <i class="fa-solid fa-star"></i></button>
+             <button class="rating-btn">2 <i class="fa-solid fa-star"></i></button>
+             <button class="rating-btn">3 <i class="fa-solid fa-star"></i></button>
+             <button class="rating-btn">4 <i class="fa-solid fa-star"></i></button>
+             <button class="rating-btn">5 <i class="fa-solid fa-star"></i></button>
+           </div>
+         </div>
+   
+         <section class="testimonials" id="testimonials">
+           
+         </section>
+   </main>
+
+   <!-- Footer -->
+    <!-- script -->
+      <script
+        src="https://kit.fontawesome.com/917179b360.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./assets/js/testimonial.js"></script>
+      <script src="./assets/js/navbar.js"></script>
+
+  </body>
+</html>

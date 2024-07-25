@@ -2,6 +2,7 @@
 body {
     margin: 0;
     background-color: rgb(217, 232, 245);
+    font-family: 'Poppins', sans-serif;
 }
 a {
     text-decoration: none;
@@ -21,59 +22,12 @@ button {
 img {
     max-width: 100%;
 }
-
-/* Home */
-.container {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    margin: 40px;
-    padding: 12px;
-    border-radius: 5px;
-    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.37);
-    
-}
-
-.container .hm-profile {
-    margin: auto;
-    padding: 20px;
-    width: 400px;
-}
-.container .hm-profile .cta-profile{
-    display: flex;
-    align-items: center;
-}
-
-.container .hm-profile .social-menu {
-    display: flex;
-}
-.container .hm-profile .social-menu ul i{
-    padding: 12px;
-}
-
-/* Card */
-
-.container .hm-profile-card {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 40px 20px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.37);
-} 
-.container .hm-profile-card img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-.container .hm-profile-card div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.title {
     text-align: center;
 }
-
+/* HEADER */
 /* navbar */
-nav {
+.nav-list {
     width: 100%;
     background-color: white;
     display: flex;
@@ -81,32 +35,110 @@ nav {
     justify-content: space-between;
     height: 64px;
 }
-
-nav .left {
+.nav-list .left {
     margin-left: 40px;
     display: flex;
     align-items: center;
 }
 
-nav .left .logo{
+.nav-list .left .logo{
     margin: auto;
     width: 40px;
 }
-nav .left ul{
+.nav-list .left ul{
     display: flex;
 }
 
-nav .left li{
+.nav-list .left li{
     list-style-type: none;
     padding: 0px 10px;
     
 }
 
-nav .right {
+.nav-list .right {
     margin-right: 40px;
     display: flex;
     padding: 0px 10px;   
 }
+.hamburger-container li{
+    text-align: center;
+    color: white;
+    border: 2px solid;
+    padding: 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+.hamburger-container a{
+    color: white;
+}
+
+.hamburger-container {
+    background-color: rgb(18, 65, 65);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.btn-hamburger {
+    display: none;
+}
+.hamburger-hide {
+    display: none;
+  }
+
+
+/* MAIN */
+/* Home */
+.container-home {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.37);
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.container-home .hm-profile {
+    margin: 20px 40px;
+    padding: 20px;
+    width: 500px;
+}
+.container-home .hm-profile .cta-profile{
+    display: flex;
+    align-items: center;
+}
+
+.container-home .hm-profile .social-menu {
+    display: flex;
+}
+.container-home .hm-profile .social-menu ul i{
+    padding: 12px;
+}
+
+/* Card */
+.container-home .hm-profile-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.37);
+} 
+.container-home .hm-profile-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.container-home .hm-profile-card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 /* contact */
 
@@ -144,3 +176,193 @@ form button{
     font-weight: bold;
     cursor: pointer;
 }
+
+/* My project */
+.project-result {
+    background-color: white;
+    margin: 0;
+}
+.project-result .title{
+    padding-top: 20px;
+
+}
+.container-myproject {
+    display: flex;
+    justify-content: center;
+    margin: 10px 40px auto;
+    padding: 12px;
+    border-radius: 5px;
+    
+}
+.container-myproject .container-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-myproject .container-card .container-content{ 
+   width: 200px;
+   margin: 10px;
+   text-align: justify;
+}
+.container-myproject .container-card .container-content .container-button{ 
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  gap: 10px;
+}
+
+.project .checkbox{
+ display: flex;
+ justify-content: space-around;
+ gap: 10px;
+}
+.project .checkbox .form-checkleft{
+    display: flex;
+   width: 50%;
+   flex-direction: column;
+   align-items: flex-start;
+   
+}
+.project .checkbox .form-checkright{
+   display: flex;
+   width: 50%;
+   flex-direction: column;
+   align-items: flex-start;
+   
+}
+.project .checkbox .checklist{
+   display: flex;
+}
+
+/* detail */
+.container-detail {
+    display: flex;
+    margin: 10px 40px;
+    padding: 12px;
+    border-radius: 5px;
+    
+}
+.container-detail .content{
+    margin: 0px 40px;
+    padding: 12px;
+    text-align: justify;
+    
+}
+.container-detail .container-content {
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-detail .Image img  {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+.container-detail .image-detail{
+    width: 400px;
+    margin: 0px 20px auto;
+    height: 300px;
+}
+
+.container-detail .image-detail .duration {
+  width: 100%;
+
+}
+.duration-title { 
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+   
+.duration-time, .duration-date {
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+.technologies {
+    width: 100%;
+}
+
+.technologies-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.technologies-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.technologies-content .technologies-left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.technologies-content .technologies-right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.technologies-content .technologies-right img{
+    width: 20px;
+    height: 20pxpx;
+}
+
+/* RESPONSIVE */
+/* brakpoint Bootstrap 5 */
+/* / X-Small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) { 
+.nav-list .left li{
+    display: none;
+}
+
+.btn-contact-me {
+    display: none;
+}
+.btn-hamburger {
+    display: block;
+}
+.container-home {
+    flex-direction: column-reverse;
+    
+}   
+
+.container-home .hm-profile {
+    width: 375px;
+}
+.container-home .hm-profile-card {
+    width: auto;
+    margin: 40px 20px;
+}
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media only screen and (max-width: 767.98px) { 
+    .container-home {
+        flex-direction: column-reverse;
+        
+    }
+    .container-home .hm-profile-card {
+        width: auto;
+    }
+ }
+
+/* // Medium devices (tablets, less than 992px) */
+@media only screen and (max-width: 991.98px) { 
+
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media only screen and (max-width: 1199.98px) { 
+
+ }
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media only screen and (max-width: 1399.98px) { 
+
+ }
