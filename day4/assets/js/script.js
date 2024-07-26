@@ -1,10 +1,12 @@
 
-function sendMail() {
-    let inputName = document.getElementById('inputName').value
-    let inputEmail = document.getElementById('inputEmail').value
-    let inputNumber = document.getElementById('inputNumber').value
-    let subject = document.getElementById('subject').value
-    let message = document.getElementById('message').value
+function sendMail(event) {
+  event.preventDefault()
+
+    const inputName = document.getElementById('inputName').value
+    const inputEmail = document.getElementById('inputEmail').value
+    const inputNumber = document.getElementById('inputNumber').value
+    const subject = document.getElementById('subject').value
+    const message = document.getElementById('message').value
   
     if (inputName == "") {
       return alert("Nama must be filled");
@@ -17,7 +19,12 @@ function sendMail() {
     } else if (message == "") {
       return alert("Message must be filled!")
     }
-  
+    console.log(inputName)
+    console.log(inputEmail)
+    console.log(inputNumber)
+    console.log(subject)
+    console.log(message)
+
     let emailReceiver = "muhamadmufidbachri27@gmail.com";
   
     let a = document.createElement("a");
