@@ -61,7 +61,6 @@
         </div>
       </nav>
     </header>
-
     {{! ===<!-- Main -->=== }}
     <main id="main" class="container mt-4">
       <div
@@ -115,6 +114,37 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-center">
+       <div class="col mt-5 ">
+            <h1 class="text-center mb-3">My Project</h1>
+            <div class="p-4 bg-white">
+              <div class="d-flex flex-wrap align-items-center justify-content-around" id="contents">
+                {{! content }}
+                <div class="card shadow-sm mb-2 rounded d-flex flex-column justify-content-center m-auto " style="max-width: 400px;">
+                  <div class="card-body m-2 ">
+                    <img class="rounded mb-2" src="../assets/image/picture.jpg" alt="" width="100%" style="object-fit: cover;" />
+                    <h2 class="card-title fw-semibold">${dataProject[i].title} </h2>
+                    <p class="card-text mb-4" id="totalMonth">durasi : 3 bulan</p>
+                    <blockquote class="blockquote mb-2">
+                      <p class=" text-break fst-italic text-align-justify text-lowercase">${dataProject[i].content}</p>
+                    </blockquote>
+                    <div class="mt-5 d-flex justify-content-start gap-4">
+                      <i class="${dataProject[i].checkReact}"></i>
+                      <i class="${dataProject[i].checkNext}"></i>
+                      <i class="${dataProject[i].checkNode}"></i>
+                    </div>
+                    <div class="d-flex justify-content-between gap-2">
+                      <button class="col-6 btn btn-primary">edit</button>
+                      <button class="col-6 btn btn-primary">delete</button>
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
         </div>
       </div>
     </main>
