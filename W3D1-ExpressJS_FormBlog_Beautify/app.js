@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.get('/', home)
 app.get('/contact', contact)
-app.get('/myproject', myproject)
+app.get('/add_project', add_project)
 app.get('/detail', detail)
 app.get('/testimonial', testimonial)
 
@@ -29,23 +29,8 @@ function contact(req, res) {
     res.render('contact')
 }
 
-function myproject(req, res) {
-    const data = [
-        {
-            title: "Title 1",
-            content: "Content 1"
-        },
-        {
-            title: "Title 2",
-            content: "Content 2"
-        },
-        {
-            title: "Title 3",
-            content: "Content 3"
-        }
-    ]
-
-    res.render('myproject', { data })
+function add_project(req, res) {
+    res.render('add_project')
 }
 
 function detail(req, res) {

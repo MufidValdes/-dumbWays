@@ -20,7 +20,7 @@
   </head>
   {{! ======== Body ======== }}
   <body>
-    <!-- Header -->
+    {{! ===<!-- Header -->=== }}
     <header id="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -45,7 +45,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="./myproject">Add Project</a>
+                <a class="nav-link" href="./add_project">Add Project</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./testimonial">My Testimonial</a>
@@ -64,16 +64,16 @@
     </header>
 
     <!-- Main -->
-    <main id="main" class="container mt-5">
+    <main id="main" class="container mt-4">
       <div class="d-flex flex-column justify-content-center">
-        <div class="">
+        <div class="add_project">
           <form
             class="mx-auto"
             style="max-width: 500px;"
             onsubmit="addProject(event)"
           >
-            <h1 class="text-center mb-4">Add My Project</h1>
-            <div class="form-group">
+            <h1 class="text-center mb-2">Add My Project</h1>
+            <div class="mb-2">
               <label for="input-project-name">Project Name</label>
               <input
                 class="form-control"
@@ -83,79 +83,91 @@
                 placeholder="Input your name"
               />
             </div>
-            <div class="form-group">
-              <label for="startDate">Start Date</label>
-              <input class="form-control" type="date" id="startDate" required />
+            <div class="mb-2 d-flex justify-content-between gap-4">
+              <div class="col">
+                <label for="startDate">Start Date</label>
+                <input
+                  class="form-control"
+                  type="date"
+                  id="startDate"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label for="endDate">End Date</label>
+                <input class="form-control" type="date" id="endDate" required />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="endDate">End Date</label>
-              <input class="form-control" type="date" id="endDate" required />
-            </div>
-            <div class="form-group">
+            <div class="mb-2">
               <label for="input-project-desc">Description</label>
               <textarea class="form-control" id="input-project-desc"></textarea>
             </div>
-            <div class="form-group">
+            <div class="mb-2">
               <label>Technologies</label>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="checkNode"
-                />
-                <label class="form-check-label" for="checkNode">NodeJS</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="checkReact"
-                />
-                <label class="form-check-label" for="checkReact">ReactJs</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="checkNext"
-                />
-                <label class="form-check-label" for="checkNext">NextJs</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="checkTypescript"
-                />
-                <label
-                  class="form-check-label"
-                  for="checkTypescript"
-                >TypeScript</label>
+              <div class="d-grid" style=" grid-template-columns: 50% 50%;">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkNode"
+                  />
+                  <label class="form-check-label" for="checkNode">NodeJS</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkReact"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="checkReact"
+                  >ReactJs</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkNext"
+                  />
+                  <label class="form-check-label" for="checkNext">NextJs</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkTypescript"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="checkTypescript"
+                  >TypeScript</label>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="input-uploadImage">Upload Image</label>
-              <input
-                class="form-control-file"
-                type="file"
-                id="input-uploadImage"
-              />
+            <div class="mb-2">
+              <label>Upload Image</label>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="file"
+                  id="input-uploadImage"
+                  aria-label="upload"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-paperclip"></i>
+                </span>
+              </div>
             </div>
             <button
               type="submit"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary float-end"
             >Submit</button>
           </form>
         </div>
 
-       
       </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-light py-3 text-center">
-      <p class="mb-0">&copy; 2024 Dumbways. All rights reserved.</p>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script
@@ -172,7 +184,5 @@
       src="https://kit.fontawesome.com/917179b360.js"
       crossorigin="anonymous"
     ></script>
-    {{!-- <script src="../assets/js/myProject.js"></script> --}}
-
   </body>
 </html>
