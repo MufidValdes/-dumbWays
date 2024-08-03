@@ -1,109 +1,196 @@
-<!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>personal web</title>
-  <!-- link CSS -->
-  <link rel="stylesheet" href="../assets/css/component/navbar.css">
-  <link rel="stylesheet" href="../assets/css/page/home.css">
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
-<!-- Body -->
-
-<body>
-     <!-- Header -->
- <header id="header">
-  <nav class="nav-container">
-    <div class="nav-left">
-      <div class="logo">
-        <a href="/">
-          <img src="https://dumbways.id/assets/images/brandred.png" alt="logo" />
-        </a>
-      </div>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/myproject">My Project</a> </li>
-        <li><a href="/testimonial">My Testimonial</a> </li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <button class="btn-contact-me"> <a href="/contact" style="color: white;">
-          Contact Me
-        </a>
-      </button>
-      <button class="btn-hamburger" onclick="toggleNavbar()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-    </div>
-  </nav>
-  <div>
-    <ul class="hamburger-container hamburger-hide" id="hamburger-container">
-      <li><a href="/">Home</a> </li>
-      <li><a href="/myproject">My Project</a> </li>
-      <li><a href="/testimonial">My Testimonial</a> </li>
-      <li><a href="/Contact">Contact Me</a></li>
-    </ul>
-  </div>
-</header>
-  <!-- Main -->
-  <main id="main">
-    <div class="home-container">
-      <div class="hm-profile">
-        <h1>Hi Welcome to my Hut</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          provident consequatur? Odio officia illum, amet alias excepturi ipsam
-          sit harum recusandae delectus explicabo perspiciatis voluptatem
-          quibusdam optio esse aut fuga! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Laborum odio excepturi provident aperiam minus
-          corrupti nostrum et impedit culpa, accusantium deleniti maxime nisi
-          beatae illum consequuntur harum numquam? Repellendus, perferendis.
-        </p>
-        <div class="cta-profile">
-          <button>Contact</button>
-          <a style="padding: 0px 20px;" href="#">download CV
-            <i class="fa-solid fa-download"> </i>
+  {{! ======== Head ======== }}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Web</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/917179b360.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  {{! ======== Body ======== }}
+  <body>
+    {{! ===<!-- Header -->=== }}
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img
+              src="https://dumbways.id/assets/images/brandred.png"
+              alt="logo"
+              width="40"
+            />
           </a>
-        </div>
-        <div class="social-menu">
-          <ul class="social-item">
-            <a href="#" class="">
-                <i class="fa-brands fa-linkedin fa-xl"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-facebook fa-xl"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-twitter fa-xl"></i>
-            </a>
-          </ul>
-        </div>
-      </div>
-      <!-- div card -->
-      <div class="hm-profile-card">
-        <img src="./assets/images/picture.jpg" alt="picture" />
-        <div>
-          <h2>Muhamad Mufid Bachri</h2>
-          <p>
-            Fullstack Developer
-          </p>
-        </div>
-      </div>
-  </main>
-  <!-- Footer -->
-  <footer></footer>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./add_project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./testimonial">My Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact">Contact Me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <button type="button" class="btn btn-success">Login</button>
+              </li>
+            </ul>
+          </div>
 
-  <!-- script -->
-  <script src="https://kit.fontawesome.com/917179b360.js" crossorigin="anonymous"></script>
-  <script src="../assets/js/index.js"></script>
-  <script src="../assets/js/navbar.js"></script>
-</body>
+        </div>
+      </nav>
+    </header>
+    {{! ===<!-- Main -->=== }}
+    <main id="main" class="container mt-4">
+      <div
+        class="row justify-content-center"
+        style="box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.37); background-color: rgb(255, 255, 255);"
+      >
+        <div class="col-md-8">
+          <div class="p-4 mb-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-title">Hi Welcome to my Hut</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores, provident consequatur? Odio officia illum, amet
+                alias excepturi ipsam sit harum recusandae delectus explicabo
+                perspiciatis voluptatem quibusdam optio esse aut fuga! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Laborum odio
+                excepturi provident aperiam minus corrupti nostrum et impedit
+                culpa, accusantium deleniti maxime nisi beatae illum
+                consequuntur harum numquam? Repellendus, perferendis.
+              </p>
+              <div
+                class="d-flex justify-content-start align-items-center gap-4"
+              >
+                <button class="btn btn-primary">Contact</button>
+                <a class="text-decoration-none text-dark" href="#">Download CV
+                  <i class="fa-solid fa-download"></i></a>
+              </div>
+              <div class="mt-5 d-flex justify-content-start gap-4">
+                <a href="#"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2xl"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2xl"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2xl"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="col-md-4">
+          <div class="p-4">
+            <div class="card shadow-sm mb-2 bg-white rounded">
+              <img
+                src="../assets/image/picture.jpg"
+                class="card-img-top w-auto mh-100"
+                style="height: 300px; object-fit: cover; "
+                alt="picture"
+              />
+              <div class="card-body text-center">
+                <h2 class="card-title">Muhamad Mufid Bachri</h2>
+                <p class="card-text">Fullstack Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-center">
+        <div class="col mt-5">
+          <h1 class="text-center mb-3">My Project</h1>
+          <div class="p-4 bg-white">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-center gap-2"
+              id="contents"
+            >
+              {{! content }}
+              {{#each data}}
+                <div
+                  class="card shadow-sm mb-2 rounded d-flex flex-column justify-content-center"
+                  style="max-width: 350px;"
+                >
+                  <div class="card-body m-2">
+                    <img
+                      class="rounded mb-2"
+                      src="../assets/image/picture.jpg"
+                      alt=""
+                      width="100%"
+                      style="object-fit: cover;"
+                    />
+                    <h2 class="card-title fw-semibold">
+                      <a href="./detail_project" target="_blank">
+                        {{this.title}}
+                      </a>
+                    </h2>
+                    <p class="card-text mb-4" id="totalMonth">durasi : 3 bulan</p>
+                    <blockquote class="blockquote mb-2">
+                      <p
+                        class="text-break fst-italic text-align-justify text-lowercase"
+                      >{{this.content}} </p>
+                    </blockquote>
+                    <div class="mt-5 d-flex justify-content-start gap-4">
+                      <i class="${dataProject[i].checkReact}"></i>
+                      <i class="${dataProject[i].checkNext}"></i>
+                      <i class="${dataProject[i].checkNode}"></i>
+                    </div>
+                    <div class="d-flex justify-content-between gap-2">
+                        <a class="col-6 " href="/update_project/{{@index}}">
+                      <button class="btn btn-primary">
+                          edit
+                      </button>
+                        </a>
+                      <form class="col-6 " action="/delete_project/{{@index}}" method="post">
+                        <button class="col-6 btn btn-primary">delete</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/917179b360.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 
 </html>
