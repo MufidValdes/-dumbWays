@@ -16,40 +16,88 @@ app.use(express.json());
 
 app.get('/', home)
 app.get('/contact', contact)
-app.get('/myproject', myproject)
-app.get('/detail', detail)
+app.get('/login', login)
+app.get('/register', register)
+
+app.get('/add_project', project)
+app.post('/add_project', add_project)
+app.post('/delete_project/:id', del_project)
+
+app.get('/detail_project/:id', detail_project)
+app.get('/update_project/:id', update_project)
 app.get('/testimonial', testimonial)
 
+const data = []
 
 function home(req, res) {
-    res.render('index')
+    // const data = [
+    //     {
+    //         title: "Title 1",
+    //         content: "content 1"
+            
+    //     },
+    //     {
+    //         title: "Title 2",
+    //         content: "content 2"
+    //     }
+    // ]
+    res.render('index', {data})
+
 }
 
 function contact(req, res) {
     res.render('contact')
 }
-
-function myproject(req, res) {
-    const data = [
-        {
-            title: "Title 1",
-            content: "Content 1"
-        },
-        {
-            title: "Title 2",
-            content: "Content 2"
-        },
-        {
-            title: "Title 3",
-            content: "Content 3"
-        }
-    ]
-
-    res.render('myproject', { data })
+function login(req, res) {
+    res.render('login')
+}
+function register(req, res) {
+    res.render('register')
 }
 
-function detail(req, res) {
-    res.render('detail')
+function project(req, res) {
+
+    res.render('add_project')
+}
+function add_project(req, res) {
+    const {title,content} = req.body
+
+    console.log("Title :", title)
+    console.log("Content :", content)
+
+    const data_project = { title, content}
+    data.unshift(data_project)
+
+    res.render('add_project')
+}
+
+function del_project(req, res) {
+    const { id } = req.params 
+    data.splice(id, 1)
+
+    res.redirect('index')
+}
+function update_project(req, res) {
+    // const { title, content, id } = req.body
+
+    // console.log("Id :", id)
+    // console.log("Title :", title)
+    // console.log("Content :", content)
+
+    // data[parseInt(id)] = {
+    //     title,
+    //     content,
+    // }
+    // res.redirect('add_project')
+}
+
+function detail_project(req, res) {
+    const { id } = req.params 
+    // const title = "Title 1"
+    // const content = "Content 1"
+
+    data.splice(id, 1)
+    res.redirect('detail_project')
 }
 
 function testimonial(req, res) {

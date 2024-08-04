@@ -2,8 +2,8 @@
   {{! ======== Head ======== }}
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Web</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -57,63 +57,70 @@
               </li>
             </ul>
           </div>
-
         </div>
       </nav>
     </header>
+    {{! ===<!-- Main -->=== }}
+    <main id="main" class="container mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-9 col-sm-8 col-md-6 col-lg-5">
+          <div class="card bg-dark text-white rounded">
+            <div class="card-body">
+              <div class="mb-4">
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
+                <p class="text-white-50 text-center">
+                  Please enter your login and password!
+                </p>
 
-    <!-- Main -->
-    <main class="container mt-4">
-      <div class="Contact">
-        <form class="mx-auto" style="max-width: 500px;">
-          <h1 class="text-center mb-2">GET IN TOUCH</h1>
-          <div class="mb-2">
-            <label for="inputName" class="form-label">Name</label>
-            <input
-              id="inputName"
-              type="text"
-              class="form-control"
-              required
-              placeholder="Input your Name"
-            />
+                <div class="form-white mb-2">
+                  <label class="form-label" for="inputEmail">Email</label>
+                  <input
+                    type="email"
+                    id="inputEmail"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-white mb-4">
+                  <label class="form-label" for="inputPassword">Password</label>
+                  <input
+                    type="password"
+                    id="inputPassword"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <p class="small mb-2">
+                  <a class="text-white-50" href="#!">Forgot password?</a>
+                </p>
+
+                <button class="btn btn-outline-light px-5" type="submit">
+                  Login
+                </button>
+
+                <div
+                  class="d-flex justify-content-center text-center mt-4 pt-1"
+                >
+                  <a href="#!" class="text-white"
+                    ><i class="fab fa-facebook-f fa-lg"></i
+                  ></a>
+                  <a href="#!" class="text-white"
+                    ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                  ></a>
+                  <a href="#!" class="text-white"
+                    ><i class="fab fa-google fa-lg"></i
+                  ></a>
+                </div>
+              </div>
+              <div>
+                <p class="mb-0 text-center">
+                  Don't have an account?
+                  <a href="./register" class="text-white-50 fw-bold">Sign Up</a>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="mb-2">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input
-              id="inputEmail"
-              type="email"
-              class="form-control"
-              required
-              placeholder="Input your Email"
-            />
-          </div>
-          <div class="mb-2">
-            <label for="inputNumber" class="form-label">Phone Number</label>
-            <input
-              id="inputNumber"
-              type="tel"
-              class="form-control"
-              required
-              placeholder="Input your Number Phone"
-            />
-          </div>
-          <div class="mb-2">
-            <label for="inputSubject" class="form-label">Subject</label>
-            <select id="inputSubject" class="form-select">
-              <option hidden>Select Subject!</option>
-              <option>Question</option>
-              <option>Hire</option>
-              <option>Let's Connect</option>
-            </select>
-          </div>
-          <div class="mb-2">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" class="form-control" rows="4"></textarea>
-          </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-success" onclick="sendMail()">Submit</button>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
 
@@ -135,7 +142,5 @@
       src="https://kit.fontawesome.com/917179b360.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../assets/js/contactForm.js"></script>
   </body>
-
 </html>

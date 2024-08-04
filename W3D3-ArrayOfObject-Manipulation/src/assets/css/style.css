@@ -14,15 +14,6 @@ a {
 p {
   text-align: justify;
 }
-button {
-  padding: 8px 12px 8px 12px;
-  border-radius: 20px 20px;
-  background-color: rgb(18, 65, 65);
-  color: white;
-  width: 120px;
-  cursor: pointer;
-}
-
 img {
   max-width: 100%;
 }
