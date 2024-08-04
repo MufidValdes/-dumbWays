@@ -27,7 +27,8 @@ app.post('/delete_project/:id', del_project)
 app.get('/update_project/:id', update_projectView)
 app.post('/update_project', update_project)
 
-app.get('/detail_project/:id', detail_project)
+app.get('/detail_project/:id', detail_projectbyId)
+app.get('/detail_project', detail_project)
 
 app.get('/testimonial', testimonial)
 
@@ -103,20 +104,18 @@ function update_project(req, res) {
     res.redirect('/')
 }
 
-function detail_project(req, res) {
+function detail_projectbyId(req, res) {
     const { id } = req.params 
 
-    const title = "Title 1"
-    const content = "Content 1"
-
-    const data = {
-        id,
-        title,
-        content
-    }
-    res.render('detail_project',{data})
+    const dataFilter = data[parseInt(id)]
+    dataFilter.id = parseInt(id)
+    console.log("dataFilter", dataFilter)
+    res.render('detail_project', { data: dataFilter })
 }
 
+function detail_project(req, res) {
+    res.redirect('/')
+}
 function testimonial(req, res) {
     res.render('testimonial')
 }
