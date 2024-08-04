@@ -66,13 +66,14 @@
     <!-- Main -->
     <main id="main" class="container mt-4">
       <div class="d-flex flex-column justify-content-center">
-        <div class="add_project">
+        <div class="form-container">
           <form
             class="mx-auto"
             style="max-width: 500px;"
-             method="post" action="/add_project"
+             method="post" action="/update_project"
           >
-            <h1 class="text-center mb-2">Add My Project</h1>
+            <h1 class="text-center mb-2">Update My Project</h1>
+            <input type="hidden" name="id" value="{{data.id}}" />
             <div class="mb-2">
               <label for="input-project-name">Project Name</label>
               <input
@@ -80,6 +81,7 @@
                 id="input-project-name"
                 type="text"
                 name="title"
+                value="{{data.title}}"
                 placeholder="Input your name"
               />
             </div>
@@ -109,6 +111,7 @@
                 class="form-control" 
                 id="input-project-desc"
                 name="content"
+                placeholder="{{data.content}}"
                 ></textarea>
             </div>
             <div class="mb-2">

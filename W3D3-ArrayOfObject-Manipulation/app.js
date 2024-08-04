@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.get('/', home)
 app.get('/contact', contact)
+
 app.get('/login', login)
 app.get('/register', register)
 
@@ -23,8 +24,11 @@ app.get('/add_project', project)
 app.post('/add_project', add_project)
 app.post('/delete_project/:id', del_project)
 
+app.get('/update_project/:id', update_projectView)
+app.post('/update_project', update_project)
+
 app.get('/detail_project/:id', detail_project)
-app.get('/update_project/:id', update_project)
+
 app.get('/testimonial', testimonial)
 
 const data = []
@@ -68,36 +72,49 @@ function add_project(req, res) {
     const data_project = { title, content}
     data.unshift(data_project)
 
-    res.render('add_project')
+    res.redirect('/')
 }
 
 function del_project(req, res) {
     const { id } = req.params 
     data.splice(id, 1)
+    
+    res.redirect('/')
+}
+function update_projectView(req, res) {
+    const { id } = req.params 
 
-    res.redirect('index')
+    const dataFilter = data[parseInt(id)]
+    dataFilter.id = parseInt(id)
+    console.log("dataFilter", dataFilter)
+    res.render('update_project', { data: dataFilter })
 }
 function update_project(req, res) {
-    // const { title, content, id } = req.body
+    const { id ,title, content, } = req.body
 
-    // console.log("Id :", id)
-    // console.log("Title :", title)
-    // console.log("Content :", content)
+    console.log("Id :", id)
+    console.log("Title :", title)
+    console.log("Content :", content)
 
-    // data[parseInt(id)] = {
-    //     title,
-    //     content,
-    // }
-    // res.redirect('add_project')
+    data[parseInt(id)] = {
+        title,
+        content,
+    }
+    res.redirect('/')
 }
 
 function detail_project(req, res) {
     const { id } = req.params 
-    // const title = "Title 1"
-    // const content = "Content 1"
 
-    data.splice(id, 1)
-    res.redirect('detail_project')
+    const title = "Title 1"
+    const content = "Content 1"
+
+    const data = {
+        id,
+        title,
+        content
+    }
+    res.render('detail_project',{data})
 }
 
 function testimonial(req, res) {
