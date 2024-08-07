@@ -1,0 +1,151 @@
+<html lang="en">
+  {{! ======== Head ======== }}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Web</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/917179b360.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  {{! ======== Body ======== }}
+  <body>
+    {{! ===<!-- Header -->=== }}
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img
+              src="https://dumbways.id/assets/images/brandred.png"
+              alt="logo"
+              width="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./add_project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./testimonial">My Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact">Contact Me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <button type="button" class="btn btn-success">Login</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {{! ===<!-- Main -->=== }}
+    <main id="main" class="container mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-9 col-sm-8 col-md-6 col-lg-5">
+          <div class="card bg-dark text-white rounded">
+            <div class="card-body">
+              <div class="mb-4">
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Register</h2>
+                 <form>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="inputFirstName">First name</label>
+                    <input type="text" id="inputFirstName" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="inputLastName">Last name</label>
+                    <input type="text" id="inputLastName" class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="inputEmail">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" />
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit"  class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/917179b360.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

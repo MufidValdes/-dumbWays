@@ -44,7 +44,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="./myproject">Add Project</a>
+                <a class="nav-link" href="./add_project">Add Project</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./testimonial">My Testimonial</a>
@@ -53,7 +53,10 @@
                 <a class="nav-link" href="./contact">Contact Me</a>
               </li>
               <li class="nav-item ms-auto">
-                <button type="button" class="btn btn-success">Login</button>
+                  <a class="text-decoration-none text-white"  href="./login">
+                  Login
+                  </a>
+               
               </li>
             </ul>
           </div>
@@ -117,18 +120,37 @@
         </div>
       </div>
       <div class="row mt-4 justify-content-center">
-       <div class="col mt-5 ">
-            <h1 class="text-center mb-3">My Project</h1>
-            <div class="p-4 bg-white">
-              <div class="d-flex flex-wrap align-items-center justify-content-around" id="contents">
-                {{! content }}
-                <div class="card shadow-sm mb-2 rounded d-flex flex-column justify-content-center m-auto " style="max-width: 400px;">
-                  <div class="card-body m-2 ">
-                    <img class="rounded mb-2" src="../assets/image/picture.jpg" alt="" width="100%" style="object-fit: cover;" />
-                    <h2 class="card-title fw-semibold">${dataProject[i].title} </h2>
+        <div class="col mt-5">
+          <h1 class="text-center mb-3">My Project</h1>
+          <div class="p-4 bg-white">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-center gap-2"
+              id="contents"
+            >
+              {{! content }}
+              {{#each data}}
+                <div
+                  class="card shadow-sm mb-2 rounded d-flex flex-column justify-content-center"
+                  style="max-width: 350px;"
+                >
+                  <div class="card-body m-2">
+                    <img
+                      class="rounded mb-2"
+                      src="../assets/image/picture.jpg"
+                      alt=""
+                      width="100%"
+                      style="object-fit: cover;"
+                    />
+                    <h2 class="card-title fw-semibold">
+                      <a href="./detail_project/{{@index}}" target="_blank">
+                        {{this.title}}
+                      </a>
+                    </h2>
                     <p class="card-text mb-4" id="totalMonth">durasi : 3 bulan</p>
                     <blockquote class="blockquote mb-2">
-                      <p class=" text-break fst-italic text-align-justify text-lowercase">${dataProject[i].content}</p>
+                      <p
+                        class="text-break fst-italic text-align-justify text-lowercase"
+                      >{{this.content}} </p>
                     </blockquote>
                     <div class="mt-5 d-flex justify-content-start gap-4">
                       <i class="${dataProject[i].checkReact}"></i>
@@ -136,15 +158,20 @@
                       <i class="${dataProject[i].checkNode}"></i>
                     </div>
                     <div class="d-flex justify-content-between gap-2">
-                      <button class="col-6 btn btn-primary">edit</button>
-                      <button class="col-6 btn btn-primary">delete</button>
+                        <a class="col-6 " href="/update_project/{{@index}}">
+                      <button class="btn btn-primary">
+                          edit
+                      </button>
+                        </a>
+                      <form class="col-6 " action="/delete_project/{{@index}}" method="post">
+                        <button class="col-6 btn btn-primary">delete</button>
+                      </form>
                     </div>
                   </div>
                 </div>
-                
-                
-              </div>
+              {{/each}}
             </div>
+          </div>
         </div>
       </div>
     </main>

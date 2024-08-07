@@ -1,5 +1,4 @@
 .testimonial-container {
-    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,13 +31,14 @@
     width: 100%;
   }
   .testimonial {
-    width: 25%;
+    width: 350px;
     margin: 0px 15px 30px 15px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .testimonial img {
+    margin-bottom: 5px;
     height: 300px;
     object-fit: cover;
   }
