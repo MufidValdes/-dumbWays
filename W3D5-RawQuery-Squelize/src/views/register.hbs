@@ -1,74 +1,151 @@
-<html>
+<html lang="en">
+  {{! ======== Head ======== }}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Web</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/917179b360.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  {{! ======== Body ======== }}
+  <body>
+    {{! ===<!-- Header -->=== }}
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img
+              src="https://dumbways.id/assets/images/brandred.png"
+              alt="logo"
+              width="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./add_project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./testimonial">My Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact">Contact Me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <button type="button" class="btn btn-success">Login</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {{! ===<!-- Main -->=== }}
+    <main id="main" class="container mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-9 col-sm-8 col-md-6 col-lg-5">
+          <div class="card bg-dark text-white rounded">
+            <div class="card-body">
+              <div class="mb-4">
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Register</h2>
+                 <form>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="inputFirstName">First name</label>
+                    <input type="text" id="inputFirstName" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="inputLastName">Last name</label>
+                    <input type="text" id="inputLastName" class="form-control" />
+                  </div>
+                </div>
+              </div>
 
-<head>
-  <title>Personal Web</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="inputEmail">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" />
+              </div>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="/images/logo.png" id="image" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link fw-semibold active text-danger" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="/blog">Add Blog</a>
-          </li>
-        </ul>
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" />
+              </div>
 
-        <div class="d-flex justify-content-end">
-          <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/register">Register</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link text-danger active fw-semibold" href="/login">Login</a>
-            </li>
-          </ul>
+              <!-- Submit button -->
+              <button type="submit"  class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
 
-          <a class="btn btn-danger btn-submit ms-5" href="/contact-me">Contact Me</a>
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button  type="button"  class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </main>
 
-  {{#if messages.danger}}
-  <div class="alert alert-danger" role="alert">
-    <div class="container">
-      {{messages.danger}}
-    </div>
-  </div>
-  {{/if}}
+    <!-- Footer -->
+    <footer></footer>
 
-  <div class="container d-flex justify-content-center">
-    <div class="w-50">
-      <h3 class="text-center mt-5">LOGIN</h3>
-      <form action="/login" method="POST">
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" name="password" id="password">
-        </div>
-        <button type="submit" class="btn btn-danger mt-3 px-5">Submit</button>
-      </form>
-    </div>
-  </div>
-</body>
-
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/917179b360.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
