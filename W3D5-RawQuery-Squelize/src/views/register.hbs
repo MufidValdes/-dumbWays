@@ -68,60 +68,49 @@
             <div class="card-body">
               <div class="mb-4">
                 <h2 class="fw-bold mb-2 text-uppercase text-center">Register</h2>
-                 <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="inputFirstName">First name</label>
-                    <input type="text" id="inputFirstName" class="form-control" />
+                 <form action="/register" method="post">
+                    <!-- Name input -->
+                    <div class="mb-4">
+                      <label class="form-label" for="inputName">name</label>
+                      <input type="text" name="name" id="inputName" class="form-control" />
+                    </div>
+                    <!-- Email input -->
+                    <div class="mb-4">
+                      <label class="form-label" for="inputEmail">Email address</label>
+                      <input type="email" name="email" id="inputEmail" class="form-control" />
+                    </div>
+
+                    <!-- Password input -->
+                    <div class=" mb-4">
+                      <label class="form-label" for="inputPassword">Password</label>
+                      <input type="password" name="password" id="inputPassword" class="form-control" />
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit"  class="btn btn-primary btn-block mb-4">
+                      Sign up
+                    </button>
+                  </form>
+
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>or sign up with:</p>
+                    <button  type="button"  class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button  type="button"  class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+
+                    <button  type="button"  class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button  type="button"  class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
                   </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="inputLastName">Last name</label>
-                    <input type="text" id="inputLastName" class="form-control" />
-                  </div>
-                </div>
-              </div>
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" for="inputEmail">Email address</label>
-                <input type="email" id="inputEmail" class="form-control" />
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" for="inputPassword">Password</label>
-                <input type="password" id="inputPassword" class="form-control" />
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit"  class="btn btn-primary btn-block mb-4">
-                Sign up
-              </button>
-
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>or sign up with:</p>
-                <button  type="button"  class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button  type="button"  class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button  type="button"  class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-
-                <button  type="button"  class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
               </div>
             </div>
           </div>

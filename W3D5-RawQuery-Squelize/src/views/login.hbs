@@ -71,33 +71,34 @@
                 <p class="text-white-50 text-center">
                   Please enter your login and password!
                 </p>
+                <form action="./login" method="post">
+                  <div class="mb-2">
+                    <label class="form-label" for="inputEmail">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="inputEmail"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label" for="inputPassword">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="inputPassword"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+                  <p class="small mb-2">
+                    <a class="text-white-50" href="#!">Forgot password?</a>
+                  </p>
 
-                <div class="form-white mb-2">
-                  <label class="form-label" for="inputEmail">Email</label>
-                  <input
-                    type="email"
-                    id="inputEmail"
-                    class="form-control form-control-lg"
-                  />
-                </div>
-
-                <div class="form-white mb-4">
-                  <label class="form-label" for="inputPassword">Password</label>
-                  <input
-                    type="password"
-                    id="inputPassword"
-                    class="form-control form-control-lg"
-                  />
-                </div>
-
-                <p class="small mb-2">
-                  <a class="text-white-50" href="#!">Forgot password?</a>
-                </p>
-
-                <button class="btn btn-outline-light px-5" type="submit">
-                  Login
-                </button>
-
+                  <button class="btn btn-outline-light px-5" type="submit">
+                    Login
+                  </button>
+                </form>
+                
                 <div
                   class="d-flex justify-content-center text-center mt-4 pt-1"
                 >
