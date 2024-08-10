@@ -1,0 +1,19 @@
+#
+npm init
+#
+npm install
+ npm install hbs //https://handlebarsjs.com/
+ npm install --save multer //https://www.npmjs.com/package/multer
+ npm install --save express-flash-message //https://www.npmjs.com/package/express-flash-message
+ npm install bcrypt //https://www.npmjs.com/package/bcrypt
+# Sequelize //https://sequelize.org/docs/v6/getting-started/
+npm install --save sequelize
+npm install --save pg pg-hstore # Postgres
+npm install --save mysql2
+npm install --save-dev sequelize-cli
+#
+npx sequelize-cli init
+
+npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string
+npx sequelize-cli model:generate --name tb_project --attributes name:char,start_date:date,end_date:date,description:text,tecnologies:Array[string],image:string,user_id:integer,duration_time:string
+

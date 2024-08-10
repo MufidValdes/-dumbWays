@@ -1,0 +1,209 @@
+<html lang="en">
+  {{! ======== Head ======== }}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/917179b360.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  {{! ======== Body ======== }}
+  <body>
+    {{! ===<!-- Header -->=== }}
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img
+              src="https://dumbways.id/assets/images/brandred.png"
+              alt="logo"
+              width="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav w-100 mb-2 mt-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./add_project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./testimonial">My Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact">Contact Me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <button type="button" class="btn btn-success">Login</button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main" class="container mt-4">
+      <div class="d-flex flex-column justify-content-center">
+        <div class="form-container">
+          <form
+            class="mx-auto"
+            style="max-width: 500px;"
+             method="post" action="/update_project"
+          >
+            <h1 class="text-center mb-2">Update My Project</h1>
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <div class="mb-2">
+              <label for="input-project-name">Project Name</label>
+              <input
+                class="form-control"
+                id="input-project-name"
+                type="text"
+                name="title"
+                value="{{this.name}}"
+                placeholder="Input your name"
+              />
+            </div>
+            <div class="mb-2 d-flex justify-content-between gap-4">
+              <div class="col">
+                <label for="startDate">Start Date</label>
+                <input 
+                  class="form-control" 
+                  type="date" 
+                  id="startDate"
+                  name="startDate"
+                  value="{{this.startDate}}"
+                />
+              </div>
+              <div class="col">
+                <label for="endDate">End Date</label>
+                <input 
+                  class="form-control" 
+                  type="date" 
+                  id="endDate" 
+                  name="endDate"
+                  value="{{this.endDate}}"
+                />
+              </div>
+            </div>
+            <div class="mb-2">
+              <label for="input-project-desc">Description</label>
+              <textarea 
+                class="form-control" 
+                id="input-project-desc"
+                name="content"
+                placeholder="{{this.content}}"
+                ></textarea>
+            </div>
+            <div class="mb-2">
+              <label>Technologies</label>
+              <div class="d-grid" style=" grid-template-columns: 50% 50%;">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkNode"
+                    value="{{this.tecnologies}}"
+                    name="node"
+                  />
+                  <label class="form-check-label" for="checkNode">NodeJS</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkReact"
+                    name="react"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="checkReact"
+                  >ReactJs</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkNext"
+                    name="next"
+                  />
+                  <label class="form-check-label" for="checkNext">NextJs</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkTypescript"
+                    name="typescript"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="checkTypescript"
+                  >TypeScript</label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <label>Upload Image</label>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="file"
+                  id="input-uploadImage"
+                  aria-label="upload"
+                  name="image"
+                  value="{{this.image}}"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-paperclip"></i>
+                </span>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary float-end"
+            >Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/917179b360.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
